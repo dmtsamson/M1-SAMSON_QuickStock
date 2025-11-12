@@ -1,0 +1,11 @@
+﻿# Visual Studio cache & builds
+.vs/
+bin/
+obj/
+
+# Angular
+item-inventory/node_modules/
+item-inventory/dist/
+
+# Editors
+.vscode/

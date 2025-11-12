@@ -1,0 +1,31 @@
+<div class="card" style="padding: var(--space-lg); max-width: 720px">
+  <h2 style="margin-top:0">{{ isEdit ? 'Edit Item' : 'New Item' }}</h2>
+
+  <form (ngSubmit)="save()" style="display:grid; gap: var(--space-lg)">
+    <div>
+      <label>Name</label>
+      <input class="input" [(ngModel)]="model.name" name="name" required />
+    </div>
+
+    <div style="display:grid; gap: var(--space); grid-template-columns: 1fr 1fr">
+      <div>
+        <label>Code</label>
+        <input class="input" [(ngModel)]="model.code" name="code" required />
+      </div>
+      <div>
+        <label>Brand</label>
+        <input class="input" [(ngModel)]="model.brand" name="brand" required />
+      </div>
+    </div>
+
+    <div>
+      <label>Unit Price</label>
+      <input class="input" type="number" [(ngModel)]="model.unitPrice" name="unitPrice" min="0" step="0.01" required />
+    </div>
+
+    <div style="display:flex; gap:10px">
+      <button type="submit" class="btn" [disabled]="saving">{{ saving ? 'Saving…' : 'Save' }}</button>
+      <a class="btn ghost" routerLink="/items">Cancel</a>
+    </div>
+  </form>
+</div>

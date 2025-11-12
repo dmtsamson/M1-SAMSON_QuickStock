@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="brand">QuickStock - Item Inventory System</div>
+</header>
+
+
+<div class="container">
+  <nav class="nav">
+    <a routerLink="/items" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Items</a>
+    <a routerLink="/items/new" routerLinkActive="active">New Item</a>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>
